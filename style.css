@@ -1,0 +1,52 @@
+/* Custom animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-20px); }
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh) rotate(360deg); }
+}
+
+.birthday-card {
+    animation: pulse 2s infinite;
+}
+
+.balloon {
+    transition: all 0.3s ease;
+}
+
+.balloon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Photo gallery styling */
+.photo-frame {
+    border: 8px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo-gallery img {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Confetti styling */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    opacity: 0.7;
+}
